@@ -6,6 +6,7 @@ const {
   getCurrentUser,
   logOut,
   subscription,
+  updateAvatar,
 } = require("./auth");
 
 const {
@@ -23,6 +24,7 @@ module.exports = {
   getCurrentUser: ctrlWrapper(getCurrentUser),
   logOut: ctrlWrapper(logOut),
   subscription: ctrlWrapper(subscription),
+  updateAvatar: ctrlWrapper(updateAvatar),
   getAllContacts: ctrlWrapper(getAllContacts),
   getContactById: ctrlWrapper(getContactById),
   addContact: ctrlWrapper(addContact),
