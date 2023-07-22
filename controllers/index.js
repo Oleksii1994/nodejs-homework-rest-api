@@ -7,6 +7,8 @@ const {
   logOut,
   subscription,
   updateAvatar,
+  verifyEmail,
+  resendVerifyEmail,
 } = require("./auth");
 
 const {
@@ -31,4 +33,6 @@ module.exports = {
   updateContact: ctrlWrapper(updateContact),
   updateStatusContact: ctrlWrapper(updateStatusContact),
   deleteContact: ctrlWrapper(deleteContact),
+  verifyEmail: ctrlWrapper(verifyEmail),
+  resendVerifyEmail: ctrlWrapper(resendVerifyEmail),
 };

@@ -19,6 +19,13 @@ router.get("/current", authenticate, controllers.getCurrentUser);
 
 router.post("/logout", authenticate, controllers.logOut);
 
+router.get("/verify/:verificationCode", controllers.verifyEmail);
+router.post(
+  "/verify",
+  validateBody(schemas.emailSchema),
+  controllers.resendVerifyEmail
+);
+
 router.patch(
   "/",
   authenticate,
